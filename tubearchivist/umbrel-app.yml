@@ -1,0 +1,61 @@
+manifestVersion: 1
+id: tubearchivist
+category: media
+name: Tubearchivist
+version: "0.4.4"
+tagline: Your self hosted YouTube media server
+description: >-
+  Once your YouTube video collection grows, it becomes hard to search and find a specific video. That's where Tube Archivist comes in: By indexing your video collection with metadata from YouTube, you can organize, search and enjoy your archived YouTube videos without hassle offline through a convenient web interface. This includes:
+
+  - Subscribe to your favorite YouTube channels
+  - Download Videos using yt-dlp
+  - Index and make videos searchable
+  - Play videos
+  - Keep track of viewed and unviewed videos
+releaseNotes: >-
+  Project Updates:
+
+  - This fixes various mapping problems, triggering a rebuild of the ta_video and ta_playlist index
+  - As always, this should be mostly automatic, if not see here.
+  - This fixes an unfortunate problem where the periodic refresh task wouldn't add outdated videos
+
+  Added:
+
+  - Added additional sort by duration and file size, #559, by @spechter
+  - Added fallback handling for missing keys in manual import, #581, by @lamusmaser
+  - Added additional tiles to the dashboard, changed dashboard layout
+  - [API] Added video stats endpoint
+  - [API] Added channel stats endpoint
+  - [API] Added playlist stats endpoint
+  - [API] Added download stats endpoint
+  
+  Changed:
+
+  - [API] Removed previous /api/stats/primary/ endpoint in favor of more detailed dedicated endpoints
+  - Changed footer text alignment, by @derekslenk
+  
+  Fixed:
+
+  - Fixed query not matching outdated documents for reindex
+  - Fixed reindex outdated pagination error
+  - Fixed comment extraction for members only videos not passing cookie correctly, #596
+  - Fixed auto delete watched on new blank index without watched videos, #592
+  - Fixed mapping problem for some playlists, #605
+  - Fixed various spelling errors on settings pages, by @pairofcrocs
+
+  Full changelog: https://github.com/tubearchivist/tubearchivist/releases
+developer: bbilly1
+website: https://www.tubearchivist.com/
+dependencies: []
+repo: https://github.com/tubearchivist/
+support: https://github.com/tubearchivist/tubearchivist/issues
+port: 8000
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: "tubearchivist"
+defaultPassword: "umbrel"
+submitter: BluePhi09
+submission: https://github.com/getumbrel/umbrel/pull/334
