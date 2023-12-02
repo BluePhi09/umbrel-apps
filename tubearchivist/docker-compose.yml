@@ -22,7 +22,7 @@ services:
       - REDIS_HOST=tubearchivist_redis_1          # don't add protocol
       - HOST_UID=1000
       - HOST_GID=1000
-#      - TA_HOST=tubearchivist.local         # set your host name
+      - TA_HOST=umbrel.local         # set your host name
       - TA_USERNAME=tubearchivist           # your initial TA credentials
       - TA_PASSWORD=umbrel              # your initial TA credentials
       - ELASTIC_PASSWORD=verysecret         # set password for Elasticsearch
